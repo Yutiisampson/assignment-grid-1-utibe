@@ -1,45 +1,44 @@
 .container {
-    display: grid;
-    grid-template-areas: 
-        'head head head'
-        'left content right'
-        'footer footer footer';
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    height: 80vh;
     width: 80vw;
-    height: 90vh;
-    margin-inline: auto;
-    color: white;
-    font-size: 25px;
-    text-align: center;
- 
+    margin-inline: auto ;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-areas: "header header header"
+                         "left main right"
+                         "footer footer footer";
 }
 header {
-    background-color: deepskyblue;
-    grid-area: head;
-}
-section {
-    background-color: rgb(118, 221, 7);
-    grid-area: content;
-}
-aside.left {
-    background-color: orangered;
+    background: deepskyblue;
+    grid-area: header;
+ }
+aside.left{
+    background: orangered;
     grid-area: left;
-}
-aside.right {
-    background-color: yellow;
+ }
+ main {
+    background: limegreen;
+    grid-area: main;
+ }
+ aside.right{
+    background: gold;
     grid-area: right;
-}
-.footmain{
+ }
+ .section {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 2rem;
+ }
+
+ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 1rem;
+    background: blueviolet;
     grid-area: footer;
-    background-color: rgb(167, 26, 167);
-    padding: 17px;
-    
-
-}
-.footmain .foot{
-    background-color: coral;
-}
+ }
+ .section.foot1 , .section.foot2, .section.foot3, .section.foot4 {
+    background-color: rgb(252, 136, 93);
+ }
